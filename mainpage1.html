@@ -12,7 +12,6 @@
   </head>
   <style>
       .carousel-item{
-          
           height: 32rem;
           background-color: grey;
       }
@@ -30,11 +29,94 @@
         margin-top: 5px;
         height: 30px;
       }
+
+      .cards{ 
+        width: 280px;
+        height: 350px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 3px;
+        padding: 15px 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 10px 15px;;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.3s;
+      }
+
+
+      /* On mouse-over, add a deeper shadow */
+      .cards:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+
+      /* Add some padding inside the card container */
+      .container {
+        padding: 2px 16px;
+      }
+      
+      .column {
+        float: left;
+        width: 20%;
+        padding: 0 10px;
+      }
+
+      /* Remove extra left and right margins, due to padding */
+      .row {margin: 0 -5px;}
+        .exam{
+          width: 100%;
+          height: 200px;
+          
+          background-position: center;
+          background-size: cover;
+        }
+        .exam1{
+          background-image: url(homes.jpg);
+        }
+        .exam2{
+          background-image: url(aravindha.jpg);
+        }
+        
+        .exam3{
+          background-image: url(ravindra.jpeg);
+        }
+        .exam4{
+          background-image: url(fitjee.jpg);
+        }
+        .exam5{
+          background-image: url(homes.jpg);
+        }
+        .exam6{
+          background-image: url(ravindra.jpeg);
+        }
+        .exam7{
+          background-image: url(aravindha.jpg);
+        }
+        .exam8{
+          background-image: url(fitjeeschool.jpg);
+        }
+        .exam9{
+          background-image: url(homes.jpg);
+        }
+        .exam10{
+          background-image: url(aravindha.jpg);
+        }
+        .exam11{
+          background-image: url(ravindra.jpeg);
+        }
+        .exam12{
+          background-image: url(fitjee.jpg);
+        }
+        .exam13{
+          background-image: url(ravindra.jpeg);
+        }
+
   </style>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home.html"><h4 style="font-style:italic; color: white;">Website</h4></a>
+        <img src="logo.png" alt="" width="50" height="54" class="d-inline-block align-top">
+        &nbsp;&nbsp;<a class="navbar-brand" href="newhome.html"><h4 style="font-style:italic; color: white;">CollegeSketch</h4></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -66,7 +148,7 @@
       </div>
     </nav>
     
-    <!---->
+    <!--
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
        
         <ol class="carousel-indicators">
@@ -76,15 +158,15 @@
           </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="overlay" style="background-image: url(p1.JPG);"></div>    
+            <div class="overlay" style="background-image: url(ravindra.jpeg);"></div>    
           </div>
           <div class="carousel-item">
-            <div class="overlay" style="background-image: url(p2.JPG);"></div>
-            <h1>Second slide slide</h1>
+            <div class="overlay" style="background-image: url(fitjeeschool.jpg);"></div>
+            
           </div>
           <div class="carousel-item">
-            <div class="overlay" style="background-image: url(p3.JPG);"></div>
-            <h1>Third slide</h1>
+            <div class="overlay" style="background-image: url(aravindha.jpg);"></div>
+            
           </div>
         </div>
         
@@ -98,8 +180,117 @@
         </a>
       </div>
     
-      <hr class="featurette-dividor">
-   
+      <hr class="featurette-dividor">-->
+
+      <br>
+
+        <div class="row">
+          <div class="column">
+            <div class="cards">
+                <div class="exam exam1"></div>
+                 <h4>School Of Arts</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>  
+            </div>
+          </div>
+
+
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam2"></div>
+              <h4>Aravindha Model School</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>   
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam3"></div>
+              <h4>Ravindra Bharathi</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>  
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam4"></div>
+              <h4>FITJEE</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>   
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam5"></div>
+              <h4>School Of Arts</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>  
+            </div>
+          </div>
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam6"></div>
+              <h4>Fourth Card</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>    
+            </div>
+          </div>
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam7"></div>
+              <h4>Fourth Card</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>  
+            </div>
+          </div>
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam8"></div>
+              <h4>Fourth Card</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>    
+            </div>
+          </div>
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam9"></div>
+              <h4>Fourth Card</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>   
+            </div>
+          </div>
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam10"></div>
+              <h4>Fourth Card</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>   
+            </div>
+          </div>
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam11"></div>
+              <h4>Fourth Card</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>   
+
+            </div>
+          </div>
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam12"></div>
+              <h4>Fourth Card</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>   
+
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="cards">
+              <div class="exam exam13"></div>
+              <h4>Fourth Card</h4>
+              <button class="btn btn-primary"><a href="https://www.newschool.edu" style="text-decoration: none; color: white;">Know More</a></button>   
+
+            </div>
+          </div>
+        </div>
+        
+        
+        
+
+     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     
   </body>
