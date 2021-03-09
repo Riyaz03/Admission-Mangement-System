@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>About Us</title>
+    </head>
+    <style>
+        bg12{
+            width: 100%;
+            
+        }
+        .container-fluid{
+            background-color: royalblue;
+            text-align: center;
+        }
+              .carousel-item{
+          height: 32rem;
+          background-color: grey;
+      }
+      .overlay{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: 0;
+          background-position: center;
+          background-size: cover;
+        
+      }
+      .d-flex{
+        margin-top: 5px;
+        height: 30px;
+      }
+
+      .cards{ 
+        width: 280px;
+        height: 450px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 3px;
+        padding: 15px 15px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 10px 15px;;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.3s;
+      }
+
+
+      /* On mouse-over, add a deeper shadow */
+      .cards:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+
+      /* Add some padding inside the card container */
+      .container {
+        padding: 2px 16px;
+      }
+      
+      .column {
+        float: left;
+        width: 31%;
+        padding: 0 10px;
+      }
+
+      /* Remove extra left and right margins, due to padding */
+      .row {margin: 0 -5px;}
+        .exam{
+          width: 100%;
+          height: 300px;
+          
+          background-position: center;
+          background-size: cover;
+        }
+        .exam1{
+          background-image: url(riyaz.jpg);
+        }
+        .exam2{
+          background-image: url(gopi.jpg);
+        }
+        
+        .exam3{
+          background-image: url(sai.jpg);
+        }
+        
+		.marg{
+			margin-left:820px;
+		}
+    </style>
+    <body>
+        <div class="btn-group btn-group-lg";">
+            <a href="home.jsp" class="btn btn-info" role="button" style="text-align: left;"><span class="glyphicon glyphicon-home ic"></span>   Home</a>
+         </div>
+         <br><br>
+        <div class="container-fluid bg12">
+            
+            <br><br>
+         <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 100px;">About Us</h1>
+         <br><br>
+        </div>
+        <div class="container">
+            <br>
+            <!-- <img  class="img-responsive img-thumbnail" src="soft.jpg" width="400" height="400" style="margin-left: 370px;">-->
+            
+            <br><br>
+            <div class="row">
+			          <div class="column">
+			            <div class="cards">
+			                <div class="exam exam1"></div>
+			                <h4>Id: 190031505</h4>
+			                 <h4>Name: Shaik Riyaz Basha</h4>
+			              <button class="btn btn-primary"><a href="https://www.linkedin.com/in/shaik-riyaz-basha-8690a0190/" style="text-decoration: none; color: white;">LinkedIN</a></button>  
+			            </div>
+			 </div>
+			          <div class="row">
+			          <div class="column">
+			            <div class="cards">
+			                <div class="exam exam2"></div>
+			                <h4>Id: 190031791</h4>
+			                 <h4>Name: Yarva Gopi</h4>
+			              <button class="btn btn-primary"><a href="https://www.linkedin.com/in/gopi-reddy-a7a322203/" style="text-decoration: none; color: white;">LinkedIN</a></button>  
+			            </div>
+			          </div>
+			          
+			          <div class="row">
+			          <div class="column">
+			            <div class="cards">
+			                <div class="exam exam3"></div>
+			                <h4>Id: 190030866</h4>
+			                 <h4>Name: Kota Sai</h4>
+			              <button class="btn btn-primary"><a href="https://www.linkedin.com/in/kota-sai-48aaa8193/" style="text-decoration: none; color: white;">LinkedIN</a></button>  
+			            </div>
+			          </div>
+			          <br>
+         <!-- <div><p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">Software developers invent the technologies we sometimes take for granted. For instance, 
+             that app that rings, sings or buzzes you out of a deep sleep every morning? A software developer helped design that.
+              And when you roll into the office and turn on your computer, clicking and scrolling through social media,
+              music and your personal calendar – software developers had a big hand in shaping those, too.</p></div>-->
+         <br><br>
+        </div>
+        <br>
+        <h1 style="text-decoration: underline;">Admission Management System</h1>
+        <h2 style="text-decoration: underline;">Enterprise Programming(Y19 CSE)</h2>
+        <h4 style="font-style:bold; text-decoration:underline">Batch-18(Team Memebers)</h4>
+        <h4 style="font-style:italic;">190031791-->Yarva Gopi</h4>
+        <h4 style="font-style:italic;">190031505-->Shaik Riyaz Basha</h4>
+        <h4 style="font-style:italic;">190030866-->Kota Sai</h4>
+        <h2 style="text-decoration: underline;">Introduction:</h2>
+        <p style="font-size: 24">Admission Management System is a web-based application built with the aim of computerizing the admission procedure in universities and colleges.In this project we used
+        HTML,CSS,JavaScript for developing frontend,and JSP,Servlet,JDBC for middle-ware and backend.</p>
+        <!--<h1>
+            About Page Works
+            <img  class="img-responsive img-thumbnail" src="soft.jpg" width="400" height="400" style="margin-left: 550px;">
+        </h1>-->
+    </body>
+</html>
