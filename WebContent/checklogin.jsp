@@ -22,7 +22,15 @@
 				String l=rs.getString(2);
 				session.setAttribute("firstname",f);
 				session.setAttribute("lastname",l);
-				response.sendRedirect("home.jsp");
+				String ok="admin";
+				if(ok.equals(rs.getString(6)))
+				{
+					response.sendRedirect("adminhome.jsp");
+				}
+				else{
+					response.sendRedirect("home.jsp");
+				}
+				
 			}
 			else{
 				%>

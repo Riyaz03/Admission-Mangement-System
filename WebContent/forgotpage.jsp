@@ -88,6 +88,7 @@
 					    <a class="dropdown-item" href="viewprofile.jsp">View Profile</a>
 					    <a class="dropdown-item" href="forgotpage.jsp">Change Password</a>
 					    <a class="dropdown-item" href="newabout.html">Contact Us</a>
+					    <a class="dropdown-item" href="feedbacks.jsp">FeedBack</a>
 					    <div class="dropdown-divider"></div>
 					    <a class="dropdown-item" href="logout.jsp">Logout</a>
 					  </div>

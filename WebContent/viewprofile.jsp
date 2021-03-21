@@ -7,12 +7,8 @@
 
 
 
-<!--
-                  
-  
-    Curve
-
-
+<!--  
+    Curve 
 -->
 <%
 	if(e!=null)
@@ -95,6 +91,7 @@
 									    <a class="dropdown-item" href="viewprofile.jsp">View Profile</a>
 									    <a class="dropdown-item" href="forgotpage.jsp">Change Password</a>
 									    <a class="dropdown-item" href="newabout.html">Contact Us</a>
+									    <a class="dropdown-item" href="feedbacks.jsp">FeedBack</a>
 									    <div class="dropdown-divider"></div>
 									    <a class="dropdown-item" href="logout.jsp">Logout</a>
 									  </div>
@@ -116,17 +113,17 @@
 							    <table  align=center width="400px">
 							    	<tr>
 								    	<th>First Name&nbsp;&nbsp;:</th>
-								    	<th><input type="text" value="<%=fname %>" readonly></th>
+								    	<th><%=fname %></th>
 							    	</tr>
 							    	
 							    	<tr>
-							    	<th>Last Name&nbsp;&nbsp;:</th>
-								    <th><input type="text" value="<%=lname %>" readonly></th>
+							    	<th>Last Name&nbsp;&nbsp;</th>
+								    <th><%=lname %></th>
 							    	</tr>
 							    	
 							    	<tr>
-							    	<th>Email&nbsp;&nbsp;:</th>
-								    <th><input type="text" value="<%=e %>" readonly></th>
+							    	<th>Email&nbsp;&nbsp;</th>
+								    <th><%=e %> </th>
 							    	</tr>
 							    	
 							    </table>

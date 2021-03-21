@@ -101,7 +101,7 @@
   </style>
   <body>
     <div class="container-fluid he">
-        <a href="home.html" class="btn btn-info col-md-12" role="button" style="background-color: rgb(17, 221, 194); font-size: x-large;">Home</a> 
+        <a href="home.jsp" class="btn btn-info col-md-12" role="button" style="background-color: rgb(17, 221, 194); font-size: x-large;">Home</a> 
         <br><br><br><br>
 
         <div class="card" style="width: 30rem; margin-left: 400px;">
@@ -129,6 +129,18 @@
                     <label style="font-size: large;">Confirm Password :</label>
                     <input type="password" class="form-control" placeholder="Confirm Password" name="confirmpass" onblur="return valid()"><i style="color:red" id="conpasserr"></i>
                 </div>
+               
+                <label style="font-size: large;">Graduation:</label><br>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="grd">
+				  <option selected>select</option>
+				  <option value="inter">10th class-Completed</option>
+				  <option value="p_inter">Intermediate-Pursuing</option>
+				  <option value="c_inter">Intermediate-Completed</option>
+				  <option value="p_btech">Btech-Pursuing</option>
+				  <option value="c_btech">Btech-Completed</option>
+				  <option value="general">others..</option>
+				  
+				</select>
                     <br>
                     <input class="form-check-input" type="checkbox" value="Required" name="checkboxs">
                     <label class="form-check-label" for="defaultCheck1">

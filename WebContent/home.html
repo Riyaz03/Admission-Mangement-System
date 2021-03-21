@@ -20,8 +20,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
     <title>HomePage</title>
+    
   </head>
-  
+  <style>
+  	.carousel-item{
+          height: 32rem;
+          background-color: grey;
+      }
+      .overlay{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: 0;
+          background-position: center;
+          background-size: cover;
+        
+      }
+      .d-flex{
+        margin-top: 5px;
+        height: 30px;
+      }
+  	
+  </style>
   <body>
 
 <div id="homediv">
@@ -54,7 +75,36 @@
       </div>
     </nav>
 
-
+	<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+       
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+          </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="overlay" style="background-image: url(hoc1.jpg);"></div>    
+          </div>
+          <div class="carousel-item">
+            <div class="overlay" style="background-image: url(ho1.jpg );"></div>
+            
+          </div>
+          <div class="carousel-item">
+            <div class="overlay" style="background-image: url(ho3.jpg);"></div>
+            
+          </div>
+        </div>
+        
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
     <div style="background-color:rgba(0, 255, 34, 0.795)" >
       <marquee width="100%" direction="left" height="30px">
         <span class="badge rounded-pill bg-info text-dark">Quick</span>&nbsp; Make Your Dreams Come True!..Create Account And Start Exploring--><a href="signup.html">SignUp</a>
