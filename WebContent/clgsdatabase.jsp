@@ -27,8 +27,8 @@
   width: 500px;
 }
 .w3-card{
-	height:350px;
-	width:300px;
+	height:550px;
+	width:400px;
 }
   </style>
   <body>
@@ -86,7 +86,9 @@ if(it_now.equals("1"))
   		<form method="post" action="clginsertok.jsp">
 			<label style="font-size: large;">Institution Name:</label><input type="text" class="form-control" placeholder="Enter Institution Name" name="clgname" required>
              <label style="font-size: large;">Institution Location:</label><input type="text" class="form-control" placeholder="Enter Institution Name" name="clgloc" required>
-             <label style="font-size: large;">Graduation:</label><br>
+             <label style="font-size: large;">Enter Minimum Eamcet Rank Required For Admission:</label><input type="text" class="form-control" placeholder="Enter Eamcet Rank" name="mineamcet" required>
+             <label style="font-size: large;">Enter Minimum Jee Mains Percentage Required For Admission:</label><input type="text" class="form-control" placeholder="Enter JeeMains Percentage" name="minmains" required>
+             <label style="font-size: large;">Type:</label><br>
              <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="clgtype">
 				  <option selected>select</option>
 				  <option value="university">University</option>
@@ -125,9 +127,9 @@ else if(it_now.equals("3"))
 
 	PreparedStatement pstmt=con.prepareStatement("select * from institutions");
 	ResultSet rs=pstmt.executeQuery();
-	out.println("<table border=2 align='center'><tr><th>Institution Name</th><th>Instituation Location</th><th>Instituation Type</th></tr>");
+	out.println("<table border=2 align='center'><tr><th>Institution Name</th><th>Instituation Location</th><th>Instituation Type</th><th>Minimum Eamcet Rank</th><th>Minimum mains Percentage</th></tr>");
 	while(rs.next()){
-		out.println("<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td></tr>");
+		out.println("<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(5)+"</td><td>"+rs.getString(6)+"</td></tr>");
 	}
 	out.println("</table>");
 }

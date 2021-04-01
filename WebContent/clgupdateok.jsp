@@ -72,11 +72,13 @@ Connection con=null;
 Class.forName("oracle.jdbc.driver.OracleDriver");
 con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","epproject","epproject");
 
-PreparedStatement pstmt=con.prepareStatement("update institutions set name=?,location=?,type=? where name=?");
+PreparedStatement pstmt=con.prepareStatement("update institutions set name=?,location=?,type=?,min_eamcet=?,min_mains=? where name=?");
 pstmt.setString(1,request.getParameter("clgname"));
 pstmt.setString(2,request.getParameter("clgloc"));
 pstmt.setString(3,request.getParameter("clgtype"));
 pstmt.setString(4,request.getParameter("fn"));
+pstmt.setString(5,request.getParameter("mineamcet"));
+pstmt.setString(6,request.getParameter("minmains"));
 pstmt.executeUpdate();
 %>  
 <h3>Institution Updated Successfully</h3>

@@ -5,116 +5,287 @@
 	
 %>
 
-
-
-<!--
-                  
-  
-    Curve
-
-
--->
 <%
 	if(e!=null)
 	{
 		%>
-			<!doctype html>
-				<html lang="en">
-				  <head>
-				    
-				    <meta charset="utf-8">
-				    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-					<!-- Bootstrap CSS -->
-				    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-					
-				    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-				    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-				  
-				    <title>Feed Back</title>
-				  </head>
-				  <style>
-				  	.column {
-				        float: left;
-				        width: 50%;
-				        padding: 0 10px;
-				      }
-				
-				      /* Remove extra left and right margins, due to padding */
-				      .row {margin: 0 -5px;}
-				  	.cards{ 
-				        width: 500px;
-				        height: 550px;
-				        text-align: center;
-				        display: inline-block;
-				        border-radius: 3px;
-				        padding: 15px 15px;
-				        box-sizing: border-box;
-				        cursor: pointer;
-				        margin: 10px 15px;;
-				        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-				        transition: 0.3s;
-				      }
-				
-				
-				      /* On mouse-over, add a deeper shadow */
-				      .cards:hover {
-				        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-				      }
-				  	.marg{
-				  	 margin-left:870px;
-				  	}
-				  </style>
-				  <body>
-				
-				<div id="homediv">
-				    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-				      <div class="container-fluid">
-				        <img src="logo.png" alt="" width="50" height="54" class="d-inline-block align-top">
-				        &nbsp;&nbsp;<a class="navbar-brand" href="home.jsp"><h4 style="font-style:italic; color: white;">CollegeSketch</h4></a>
-				        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				          <span class="navbar-toggler-icon"></span>
-				        </button>
-				        <div class="collapse navbar-collapse" id="navbarNav">
-				          <ul class="navbar-nav">
-				            &nbsp;&nbsp;
-				            <li class="nav-item">
-				              <a class="nav-link" href="home.jsp" style="color: white;">Home</a>
-				            </li>
-				           &nbsp;&nbsp;
-				            <li class="nav-item">
-				              <a class="nav-link" href="newabout.html" style="color: white;">AboutUs</a>
-				            </li>
-				            &nbsp;
-				            <li class="nav-item">
-				            	<div class="btn-group marg">
-									  <button type="button" class="btn btn-primary">Menu</button>
-									  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									    <span class="sr-only">Toggle Dropdown</span>
-									  </button>
-									  <div class="dropdown-menu">
-									    <a class="dropdown-item" href="viewprofile.jsp">View Profile</a>
-									    <a class="dropdown-item" href="forgotpage.jsp">Change Password</a>
-									    <a class="dropdown-item" href="newabout.html">Contact Us</a>
-									    <div class="dropdown-divider"></div>
-									    <a class="dropdown-item" href="logout.jsp">Logout</a>
-									  </div>
-									</div>
-				            </li>
-				            
-				          </ul>
-				          
-				                  </div>
-				      </div>
-				    </nav>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<title>Profie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+</head>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color:rgb(25, 202, 202);
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(24, 204, 195);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .w3-card{
+      margin-left: 50px;
+      height: 300px;
+      width: 1300px;
+  }
+  header{
+        background: url(header-cover.jpg);
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    header:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-image: url();
+        height: 275px;
+    }
+    .header-content{
+        z-index: 1;
+        position:relative;
+    }
+    .header-content h1{
+        font-size: 45px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: white;
+    }
+    .header-content p{
+        font-size: 20px;
+        margin: 20px 0 25px;
+        color: white;
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+    .theme-btn{
+        border-radius: 50px;
+        background:white;
+        padding: 15px 30px;
+        min-width: 170px;
+        border:2px solid white;
+        color:black;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-top: 13px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 12px;
+        transition: all 0.5s ease-in;
+        font-weight: bold;
+    }
+    .theme-btn:hover{
+        text-decoration: none;
+        background-color: white;
+        color: #333;
+    }
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #4fdaec;
+  background-color: #4fdaec;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
+.w3-card{
+    margin-left: 50px;
+    height: 520px;
+    width: 500px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer{
+   background: #111;
+   height: auto;
+   width: 100vw;
+   font-family: "Open Sans"; 
+   padding-top:40px;
+   color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    background-color: #000 ;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin:0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover{
+    color: aqua;
+}
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+
+}
+.footer-content p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+  </style>
+<body>
+
+<div class="navbar">
+  <a href="home.jsp" style="font-size: x-large; font-weight: bold;">College Sketch</a>
+  <a href="home.jsp" style="font-size: large; margin-top: 7px;">Home</a>
+  <a href="newabout.html" style="font-size: large;margin-top: 7px;">AboutUs</a>
+  <div class="dropdown" style="margin-left: 800px;">
+    <button class="dropbtn" style="font-size: large;margin-top: 7px;">Menu 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="viewprofile.jsp">View Profile</a>
+      <a href="forgotpage.jsp">Change Password</a>
+      <a href="feedbacks.jsp">Feedback</a>
+      <a href="newabout.html">About Us</a>
+      <a href="logout.jsp">Logout</a>
+    </div>
+  </div> 
+</div>
+	<br><br>
 				
 				
 				
 					<center>
-							 <div class="cards">
+							 <div class="w3-panel w3-card">
 							 <form method="post" action="fs.jsp">
 							    <h2 style="color:blue;">Give Your Feed Back! So that we can improve the Web Page...</h2>
 							    <textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;width:480px;height:300px">Enter Feed Back.....
 									</textarea>
+									<br><br>
 							    <button class="btn btn-info">Submit</button>
 							    </form>
 							 </div>                  
@@ -125,19 +296,29 @@
 				
 				   
 				
-				    <!-- Optional JavaScript -->
-				    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-				    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-				    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-				    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-				 
-				    
-				    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-				
-				    
-				  </body>
-				</html>
-		
+				    <br><br>
+     <br><br>
+<footer>
+        <div class="footer-content">
+            <h3>College Sketch</h3>
+            <p>Website developed by Batch-18 as a part of Enterprise Programming Course</p>
+            <!--<ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+
+            </ul>-->
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2021 College Sketch. designed by <span>EP project batch-18</span></p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
+
 		<%
 	}
 	else{

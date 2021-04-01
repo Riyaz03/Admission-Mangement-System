@@ -88,12 +88,182 @@
 		.marg{
 			margin-left:820px;
 		}
+		body{
+        font-family: tahoma;
+    }
+    header{
+        background: url(header-cover.jpg);
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    header:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-image: url();
+        height: 275px;
+    }
+    .header-content{
+        z-index: 1;
+        position:relative;
+    }
+    .header-content h1{
+        font-size: 45px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: white;
+    }
+    .header-content p{
+        font-size: 20px;
+        margin: 20px 0 25px;
+        color: white;
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+    .theme-btn{
+        border-radius: 50px;
+        background:white;
+        padding: 15px 30px;
+        min-width: 170px;
+        border:2px solid white;
+        color:black;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-top: 13px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 12px;
+        transition: all 0.5s ease-in;
+        font-weight: bold;
+    }
+    .theme-btn:hover{
+        text-decoration: none;
+        background-color: white;
+        color: #333;
+    }
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #4fdaec;
+  background-color: #4fdaec;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
+.w3-card{
+    margin-left: 50px;
+    height: 300px;
+    width: 1300px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer{
+   background: #111;
+   height: auto;
+   width: 100vw;
+   font-family: "Open Sans"; 
+   padding-top:40px;
+   color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    background-color: #000 ;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin:0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover{
+    color: aqua;
+}
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+
+}
+.footer-content p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}    
     </style>
     <body>
-        <div class="btn-group btn-group-lg";">
-            <a href="home.jsp" class="btn btn-info" role="button" style="text-align: left;"><span class="glyphicon glyphicon-home ic"></span>   Home</a>
-         </div>
-         <br><br>
+    <ul>
+            <li><a href="home.jsp" style="font-size: large; color: white;">College Sketch</a></li>
+
+            <li style="margin-left: 100px;"><a href="home.jsp" style="font-size: large; color: white;">Home</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        <br><br><br>
         <div class="container-fluid bg12">
             
             <br><br>
@@ -150,5 +320,26 @@
             About Page Works
             <img  class="img-responsive img-thumbnail" src="soft.jpg" width="400" height="400" style="margin-left: 550px;">
         </h1>-->
+        </div>
+        </div>
+        </div>
+        
+        <footer>
+        <div class="footer-content">
+            <h3>College Sketch</h3>
+            <p>Website developed by Batch-18 as a part of Enterprise Programming Course</p>
+            <!--<ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+
+            </ul>-->
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2021 College Sketch. designed by <span>EP project batch-18</span></p>
+
+        </div>
+    </footer>
     </body>
 </html>

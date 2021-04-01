@@ -1,3 +1,8 @@
+<%@ page import="java.sql.*" %>
+<%
+//out.println(request.getParameter("clgname"));
+String ems=(String)session.getAttribute("email");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +14,7 @@
 <title>College Sketch</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 
 
@@ -167,8 +173,13 @@ li a.active {
 }
 .w3-card{
     margin-left: 50px;
-    height: 300px;
+    height: 200px;
     width: 1300px;
+}
+.inside{
+    margin-left: 30px;
+    height: 180px;
+    width: 385px;
 }
 
 *{
@@ -246,93 +257,118 @@ footer{
 <body>
 
 <div class="navbar">
-  <a href="home.html" style="font-size: x-large; font-weight: bold;">College Sketch</a>
-  <a href="home.html" style="font-size: large; margin-top: 7px;">Home</a>
-  <a href="login.html" style="font-size: large; margin-top: 7px;">Login</a>
-  <a href="signup.html" style="font-size: large; margin-top: 7px;">SignUp</a>
+  <a href="home.jsp" style="font-size: x-large; font-weight: bold;">College Sketch</a>
+  <a href="home.jsp" style="font-size: large; margin-top: 7px;">Home</a>
+  
   <a href="newabout.html" style="font-size: large;margin-top: 7px;">AboutUs</a>
-  <!-- <div class="dropdown" style="margin-left: 600px;">
+  
+  
+  
+  <div class="dropdown" style="margin-left: 810px;">
     <button class="dropbtn" style="font-size: large;margin-top: 7px;">Menu 
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+     <div class="dropdown-content">
       <a href="viewprofile.jsp">View Profile</a>
-      <a href="#">Change Password</a>
-      <a href="#">Feedback</a>
-      <a href="#">About Us</a>
-      <a href="#">Logout</a>
-    </div>
-  </div>--> 
+      <a href="forgotpage.jsp">Change Password</a>
+      <a href="feedbacks.jsp">Feedback</a>
+      <a href="newabout.html">Contact Us</a>
+      <a href="logout.jsp">Logout</a>
+    </div> 
+  </div> 
 </div>
-<div style="background: url(header-cover.jpg);background-size: cover;height: 80vh;position: relative;overflow: hidden;">
-	<div class="w3-row" >
-		<div class="w3-col s6" >
-			<div style="margin-left:100px;margin-top:150px">
-			<h1 style="color:white;font-weight:bold;">College Sketch</h1>
-			<h3 style="color:white;">Make Your Dreams Come True.....!</h3>
-			<a href="login.html" style="text-decoration: none;display: inline-block;  width: 140px;border-radius:50px;" role="button" class="w3-btn w3-white w3-border">Login</a>
-			&nbsp;&nbsp;&nbsp;
-			<a href="signup.html" style="text-decoration: none;display: inline-block;  width: 140px; border-radius:50px;" role="button" class="w3-btn w3-white w3-border">SignUp</a>
-			</div>
-			
-		</div>
-		<div class="w3-col s6">
-			<div style="margin-left:80px;margin-top:60px">
-				<img src="headimage.jfif" height=400 width=500>
-			</div> 
-			  
-		</div>	
-	</div>
-	<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#FFFFFF" fill-opacity="1" d="M0,32L48,48C96,64,192,96,288,96C384,96,480,64,576,58.7C672,53,768,75,864,112C960,149,1056,203,1152,202.7C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-       -->
-</div>
-<br><br>
-<div class="w3-panel w3-card">
-  <div class="w3-row">
-          <div class="w3-col s6"><br><br><br><h2>Pursuing B.Tech!</h2> Join In Internships by availing Internship Offers From Our Website...
-             <br><a href="mainpage.jsp?typese=<%=sch %>" type="button" style="margin-left:200px;margin-top: 50px; text-decoration: none;display: block;  width: 140px;" role="button" class="w3-btn w3-blue w3-border">Explore ></a>
-          </div>
-          <div class="w3-col s6"><img src="ho3.jpg" height="300" width="600"></div>
-      </div>  
-</div>
-<br><br>
-  <div class="w3-panel w3-card">
-  <div class="w3-row">
-          <div class="w3-col s6"><br><br><br><h2>Completed Intermediate!</h2>Explore Our Website To get Admission In Your Dream University...
-              <br><a href="mainpage.jsp?typese=<%=sch %>" type="button" style="margin-left:200px;margin-top: 50px; text-decoration: none;display: block;  width: 140px;" role="button" class="w3-btn w3-blue w3-border">Explore ></a>
-          </div>
-          <div class="w3-col s6"><img src="ho1.jpg" height="300" width="600"></div>
-      </div>  
-</div>
-<br><br>
-<div class="w3-panel w3-card">
-  <div class="w3-row">
-          <div class="w3-col s6"><br><br><br><h2>Completed X standard!</h2> Explore Our Website For Colleges To Complete Intermediate...
-              <br><a href="mainpage.jsp?typese=<%=clg%>" type="button" style="margin-left:200px;margin-top: 50px; text-decoration: none;display: block;  width: 140px;" role="button" class="w3-btn w3-blue w3-border">Explore ></a>
-
-          </div>
-          <div class="w3-col s6"><img src="ho2.jpg" height="300" width="600"></div>
-      </div>  
-</div> 
-</div>
-<br><br>
-<footer>
-        <div class="footer-content">
-            <h3>College Sketch</h3>
-            <p>Website developed by Batch-18 as a part of Enterprise Programming Course</p>
-            <!--<ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-
-            </ul>-->
-        </div>
-        <div class="footer-bottom">
-            <p>copyright &copy;2021 College Sketch. designed by <span>EP project batch-18</span></p>
-
-        </div>
-    </footer>
-
-</body>
-</html>
+<%
+if(ems!=null)
+{
+	//out.println(request.getParameter("clgname"));
+	//out.println(request.getParameter("ts"));
+	//int m=request.getParameter("ts");
+		try{
+				Connection con=null;
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+				con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","epproject","epproject");
+				String ts=request.getParameter("ts");
+				
+				if(ts.equals("1"))
+				{
+					
+					PreparedStatement pstmt=con.prepareStatement("select * from universities where name=?");
+					pstmt.setString(1,request.getParameter("clgname"));
+					ResultSet rs=pstmt.executeQuery();
+					if(rs.next())
+					{
+						%>					
+						<div class="w3-panel w3-card">
+						  <div class="w3-row">
+						          <div class="w3-col s4" >
+						          		<br><br>
+							          <i class='fas fa-map-marker-alt' style='font-size:60px;margin-left:150px;color:blue;'></i>
+							          <br><br><h4 style="font-family: Lucida Console, Courier New, monospace;color:green;">Location:<%=rs.getString(2) %></h4>
+						          </div>
+						          <div class="w3-col s4">
+						          			<h2 style="font-family: Times New Roman, Times, serif;color:red;text-decoration:underline;" align="center"><%=rs.getString(1) %></h2>
+						          			<div class="w3-panel w3-card inside">
+						          			<img src="homes.jpg" class="w3-round" height="180" width="350">
+									        </div>
+						          </div>
+						          <div class="w3-col s4">
+							          <br><br>
+							          <i class='fas fa-chalkboard-teacher' style='font-size:60px;margin-left:150px;color:blue;'></i>
+							          <br><br><h4 style="font-family: Lucida Console, Courier New, monospace;color:green;">&nbsp;Director:<%=rs.getString(5)%></h4>
+						          </div>
+						          
+						</div>
+						<%
+					}
+					else{
+						out.println("no records");
+					}
+				}
+				else if(ts.equals("2"))
+				{
+					PreparedStatement pstmt=con.prepareStatement("select * from colleges where name=?");
+					pstmt.setString(1,request.getParameter("clgname"));
+					ResultSet rs=pstmt.executeQuery();
+					if(rs.next())
+					{
+						%>					
+						<div class="w3-panel w3-card">
+						  <div class="w3-row">
+						          <div class="w3-col s4" >
+						          		<br><br>
+							          <i class='fas fa-map-marker-alt' style='font-size:60px;margin-left:150px;color:blue;'></i>
+							          <br><br><h4 style="font-family: Lucida Console, Courier New, monospace;color:green;">Location:<%=rs.getString(2) %></h4>
+						          </div>
+						          <div class="w3-col s4">
+						          			<h2 style="font-family: Times New Roman, Times, serif;color:red;text-decoration:underline;" align="center"><%=rs.getString(1) %></h2>
+						          			<div class="w3-panel w3-card inside">
+						          			<img src="homes.jpg" class="w3-round" height="180" width="350">
+									        </div>
+						          </div>
+						          <div class="w3-col s4">
+							          <br><br>
+							          <i class='fas fa-chalkboard-teacher' style='font-size:60px;margin-left:150px;color:blue;'></i>
+							          <br><br><h4 style="font-family: Lucida Console, Courier New, monospace;color:green;">&nbsp;Director:<%=rs.getString(4)%></h4>
+						          </div>
+						          
+						</div>
+						<%
+					}
+					else{
+						out.println("no records");
+					}
+				}
+				
+				
+				
+	}
+	catch(Exception e)
+	{
+		out.println(e);
+	}
+	
+}
+else{
+	out.println("session Expired");
+}
+%>

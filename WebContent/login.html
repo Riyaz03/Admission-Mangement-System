@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <title>SignUP Page</title>
+    <title>Login Page</title>
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script>
           function valid()
           {
@@ -51,11 +56,183 @@
             background-image: url(log1.jpg);
             background-position: center;
             background-size: cover;
-        }    
+        }
+        body{
+        font-family: tahoma;
+    }
+    header{
+        background: url(header-cover.jpg);
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    header:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-image: url();
+        height: 275px;
+    }
+    .header-content{
+        z-index: 1;
+        position:relative;
+    }
+    .header-content h1{
+        font-size: 45px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: white;
+    }
+    .header-content p{
+        font-size: 20px;
+        margin: 20px 0 25px;
+        color: white;
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+    .theme-btn{
+        border-radius: 50px;
+        background:white;
+        padding: 15px 30px;
+        min-width: 170px;
+        border:2px solid white;
+        color:black;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-top: 13px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 12px;
+        transition: all 0.5s ease-in;
+        font-weight: bold;
+    }
+    .theme-btn:hover{
+        text-decoration: none;
+        background-color: white;
+        color: #333;
+    }
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #4fdaec;
+  background-color: #4fdaec;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #4CAF50;
+}
+.w3-card{
+    margin-left: 50px;
+    height: 300px;
+    width: 1300px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer{
+   background: #111;
+   height: auto;
+   width: 100vw;
+   font-family: "Open Sans"; 
+   padding-top:40px;
+   color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    background-color: #000 ;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin:0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover{
+    color: aqua;
+}
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+
+}
+.footer-content p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}    
   </style>
   <body>
+  <ul>
+            <li><a href="home.html" style="font-size: large; color: white;">College Sketch</a></li>
+
+            <li style="margin-left: 100px;"><a href="home.html" style="font-size: large; color: white;">Home</a></li>
+            
+            
+            
+            <li><a href="signup.html" style="font-size: large; color: white;">SignUp</a></li>
+            <li style="float:right"><a href="#about" style="font-size: large;">AboutUs</a></li>
+        </ul>
     <div class="container-fluid he">
-        <a href="home.html" class="btn btn-info col-md-12" role="button" style="background-color:  rgb(17, 221, 194); font-size: x-large;">Home</a> 
         <br><br><br><br><br><br>
 
         <div class="card" style="width: 30rem; margin-left: 400px;">
@@ -80,6 +257,23 @@
             </div>
           </div>
     </div>
+    <footer>
+        <div class="footer-content">
+            <h3>College Sketch</h3>
+            <p>Website developed by Batch-18 as a part of Enterprise Programming Course</p>
+            <!--<ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+
+            </ul>-->
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2021 College Sketch. designed by <span>EP project batch-18</span></p>
+
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
     

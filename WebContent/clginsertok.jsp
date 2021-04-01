@@ -7,11 +7,13 @@
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","epproject","epproject");
 		
-		PreparedStatement pstmt=con.prepareStatement("insert into institutions values(?,?,?,?)");
+		PreparedStatement pstmt=con.prepareStatement("insert into institutions values(?,?,?,?,?,?)");
 		pstmt.setString(1,request.getParameter("clgname"));
 		pstmt.setString(2,request.getParameter("clgloc"));
 		pstmt.setString(3,request.getParameter("clgtype"));
 		pstmt.setString(4,"exam1");
+		pstmt.setString(5,request.getParameter("mineamcet"));
+		pstmt.setString(6,request.getParameter("minmains"));
 		pstmt.execute();
 		
 			out.println("Data Inserted Successfully");
