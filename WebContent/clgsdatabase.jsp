@@ -27,7 +27,7 @@
   width: 500px;
 }
 .w3-card{
-	height:550px;
+	height:570px;
 	width:400px;
 }
   </style>
@@ -77,6 +77,7 @@
 String it_now=request.getParameter("outer");
 //out.println(request.getParameter("outer")+",");
 
+//--Insert
 if(it_now.equals("1"))
 {
 	%>
@@ -86,14 +87,16 @@ if(it_now.equals("1"))
   		<form method="post" action="clginsertok.jsp">
 			<label style="font-size: large;">Institution Name:</label><input type="text" class="form-control" placeholder="Enter Institution Name" name="clgname" required>
              <label style="font-size: large;">Institution Location:</label><input type="text" class="form-control" placeholder="Enter Institution Name" name="clgloc" required>
-             <label style="font-size: large;">Enter Minimum Eamcet Rank Required For Admission:</label><input type="text" class="form-control" placeholder="Enter Eamcet Rank" name="mineamcet" required>
-             <label style="font-size: large;">Enter Minimum Jee Mains Percentage Required For Admission:</label><input type="text" class="form-control" placeholder="Enter JeeMains Percentage" name="minmains" required>
-             <label style="font-size: large;">Type:</label><br>
+             <label style="font-size: large;">Branch:</label><input type="text" class="form-control" placeholder="Enter Branch" name="clgbr" required>
+             <label style="font-size: large;">Director Name:</label><input type="text" class="form-control" placeholder="Enter Director Name" name="clgdir" required>
+             <!-- <label style="font-size: large;">Type:</label><br>
              <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="clgtype">
 				  <option selected>select</option>
 				  <option value="university">University</option>
 				  <option value="college">College</option>
-			 </select>
+			 </select> -->
+			 <label style="font-size: large;">College Image:</label>
+			 <input type="file" name="imagepath">
 			 <br><br>
 			 <button type="submit" class="btn btn-primary">Insert Data</button>			
 		</form>
@@ -101,6 +104,7 @@ if(it_now.equals("1"))
 	</center>
 	<%
 }
+//--delete clg
 else if(it_now.equals("2"))
 {
 	%>
@@ -119,20 +123,27 @@ else if(it_now.equals("2"))
 	
 	
 }
+//-- view clg 
 else if(it_now.equals("3"))
 {
 	Connection con=null;
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","epproject","epproject");
 
-	PreparedStatement pstmt=con.prepareStatement("select * from institutions");
+	PreparedStatement pstmt=con.prepareStatement("select * from colleges");
 	ResultSet rs=pstmt.executeQuery();
-	out.println("<table border=2 align='center'><tr><th>Institution Name</th><th>Instituation Location</th><th>Instituation Type</th><th>Minimum Eamcet Rank</th><th>Minimum mains Percentage</th></tr>");
+	out.println("<table border=2 align='center'><tr><th>Institution Name</th><th>Instituation Location</th><th>Branch</th><th>Director Name</th><th>Image</th></tr>");
 	while(rs.next()){
-		out.println("<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(5)+"</td><td>"+rs.getString(6)+"</td></tr>");
+		String name=rs.getString(1);
+		out.println("<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td>");
+		%>
+		<img src="imagedisplay.jsp?name=<%=name%>">
+		<%
+		out.println("</tr>");
 	}
 	out.println("</table>");
 }
+//--update clg
 else if(it_now.equals("4"))
 {
 	%>
@@ -150,6 +161,7 @@ else if(it_now.equals("4"))
 	<% 
 	
 }
+//--view user records
 else if(it_now.equals("5")){
 	Connection con=null;
 	Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -163,7 +175,8 @@ else if(it_now.equals("5")){
 	}
 	out.println("</table>");
 }
-else{
+//--view feedbacks
+else if(it_now.equals("6")){
 	Connection con=null;
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","epproject","epproject");
@@ -177,5 +190,89 @@ else{
 	out.println("</table>");
 	
 }
+//Univesities
+//--Insert
+else if(it_now.equals("7")){
+	//out.println(it_now);
+	%>
+	<center>
+	<div class="w3-panel w3-card">
+	<h3 style="text-decoration:underline;">Enter Details</h3>
+  		<form method="post" action="univinsertok.jsp">
+			<label style="font-size: large;">University Name:</label><input type="text" class="form-control" placeholder="Enter Institution Name" name="clgname" required>
+             <label style="font-size: large;">University Location:</label><input type="text" class="form-control" placeholder="Enter Institution Name" name="clgloc" required>
+             <label style="font-size: large;">Director Name:</label><input type="text" class="form-control" placeholder="Enter Director Name" name="clgdir" required>
+             <label style="font-size: large;">Minimum Eamcet Rank Required:</label><input type="text" class="form-control" placeholder="Enter Mininmum Rank" name="eamcet" required>
+             <label style="font-size: large;">Minimum JeeMains Percetage Required:</label><input type="text" class="form-control" placeholder="Enter Minimum Percentage" name="mains" required>
+             <!-- <label style="font-size: large;">Type:</label><br>
+             <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="clgtype">
+				  <option selected>select</option>
+				  <option value="university">University</option>
+				  <option value="college">College</option>
+			 </select> -->
+			 <label style="font-size: large;">University Image:</label>
+			 <input type="file" name="imagepath">
+			 <br><br>
+			 <button type="submit" class="btn btn-primary">Insert Data</button>			
+		</form>
+	</div>
+	</center>
+	<%
+}
+//--Delete
+else if(it_now.equals("8")){
+	out.println(it_now);
+}
+//--View
+else if(it_now.equals("9")){
+	out.println(it_now);
+}
+//--Update
+else if(it_now.equals("10")){
+	out.println(it_now);
+}
+//Internships....
 
+//--Insert
+else if(it_now.equals("11")){
+	//out.println(it_now);
+	%>
+	<center>
+	<div class="w3-panel w3-card">
+	<h3 style="text-decoration:underline;">Enter Details</h3>
+  		<form method="post" action="interninsertok.jsp">
+			<label style="font-size: large;">Company Name:</label><input type="text" class="form-control" placeholder="Enter Company Name" name="cname" required>
+             <label style="font-size: large;">Location:</label><input type="text" class="form-control" placeholder="Enter Location" name="cloc" required>
+             <label style="font-size: large;">Skills Required:</label><input type="text" class="form-control" placeholder="Enter Skills" name="skills" required>
+            <label style="font-size: large;">Type:</label><br>
+             <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="itype">
+				  <option selected>select</option>
+				  <option value="part-time">Part-Time</option>
+				  <option value="full-time">Full-Time</option>
+			 </select>
+			              <label style="font-size: large;">Duration:</label><input type="text" class="form-control" placeholder="Enter Duration" name="duration" required>
+			 
+            <label style="font-size: large;">Specilization:</label><input type="text" class="form-control" placeholder="Enter Specialization" name="spec" required>
+             
+			 <label style="font-size: large;">Image:</label>
+			 <input type="file" name="imagepath">
+			 <br><br>
+			 <button type="submit" class="btn btn-primary">Insert Data</button>			
+		</form>
+	</div>
+	</center>
+	<%
+}
+//--Delete
+else if(it_now.equals("12")){
+	out.println(it_now);
+}
+//--View
+else if(it_now.equals("13")){
+	out.println(it_now);
+}
+//--Update
+else if(it_now.equals("14")){
+	out.println(it_now);
+}
 %>

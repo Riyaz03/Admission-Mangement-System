@@ -297,6 +297,7 @@ if(ems!=null)
 					ResultSet rs=pstmt.executeQuery();
 					if(rs.next())
 					{
+						String name=rs.getString(1);
 						%>					
 						<div class="w3-panel w3-card">
 						  <div class="w3-row">
@@ -308,7 +309,7 @@ if(ems!=null)
 						          <div class="w3-col s4">
 						          			<h2 style="font-family: Times New Roman, Times, serif;color:red;text-decoration:underline;" align="center"><%=rs.getString(1) %></h2>
 						          			<div class="w3-panel w3-card inside">
-						          			<img src="homes.jpg" class="w3-round" height="180" width="350">
+						          			<img src="unimagedisplay.jsp?name=<%=name%>" class="w3-round" height="180" width="350">
 									        </div>
 						          </div>
 						          <div class="w3-col s4">
@@ -331,6 +332,7 @@ if(ems!=null)
 					ResultSet rs=pstmt.executeQuery();
 					if(rs.next())
 					{
+						String name=rs.getString(1);
 						%>					
 						<div class="w3-panel w3-card">
 						  <div class="w3-row">
@@ -342,7 +344,7 @@ if(ems!=null)
 						          <div class="w3-col s4">
 						          			<h2 style="font-family: Times New Roman, Times, serif;color:red;text-decoration:underline;" align="center"><%=rs.getString(1) %></h2>
 						          			<div class="w3-panel w3-card inside">
-						          			<img src="homes.jpg" class="w3-round" height="180" width="350">
+						          			<img src="imagedisplay.jsp?name=<%=name%>" class="w3-round" height="180" width="350">
 									        </div>
 						          </div>
 						          <div class="w3-col s4">

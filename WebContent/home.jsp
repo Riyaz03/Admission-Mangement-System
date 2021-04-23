@@ -299,7 +299,9 @@ footer{
 <div class="w3-panel w3-card">
   <div class="w3-row">
           <div class="w3-col s6"><br><br><br><h2>Completed X standard!</h2> Explore Our Website For Colleges To Complete Intermediate...
-              <br><a href="mainpage.jsp?typese=<%=sch%>" type="button" style="margin-left:200px;margin-top: 50px; text-decoration: none;display: block;  width: 140px;" role="button" class="w3-btn w3-blue w3-border">Explore ></a>
+              <br><a href="mainpage.jsp?typese=<%=sch %>" type="button" style="margin-left:200px;margin-top: 50px; text-decoration: none;display: block;  width: 140px;" role="button" class="w3-btn w3-blue w3-border">Explore ></a>
+              
+           <!-- <a href="mainpage.jsp?typese=<%=sch%>>Explore</a> -->
 
           </div>
           <div class="w3-col s6"><img src="ho2.jpg" height="300" width="600"></div>

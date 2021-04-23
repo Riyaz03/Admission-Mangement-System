@@ -91,7 +91,7 @@ String oks=request.getParameter("t");
 					<div class="w3-panel w3-card">
 						<br>
 						<img src="insertimage.png">
-						<h3>Insert Institution Data</h3>
+						<h3>Insert College Data</h3>
 						<a href="clgsdatabase.jsp?outer=<%="1" %>" class="btn btn-primary">Insert</a>
 					</div>
 				</div>
@@ -99,7 +99,7 @@ String oks=request.getParameter("t");
 					<div class="w3-panel w3-card">
 						<br>
 						<img src="deleteimage.png">
-						<h3>Delete Institution Data</h3>
+						<h3>Delete College Data</h3>
 						<a href="clgsdatabase.jsp?outer=<%="2" %>" class="btn btn-primary">Delete</a>
 					</div>
 				</div>
@@ -107,7 +107,7 @@ String oks=request.getParameter("t");
 				 <div class="w3-panel w3-card">
 				 	<br>
 						<img src="viewimage.png">
-				 	<h3>View all Institutions Data</h3>
+				 	<h3>View all College Data</h3>
 				 	<a href="clgsdatabase.jsp?outer=<%="3" %>" class="btn btn-primary">View</a>
 				 </div>
 				</div>
@@ -115,7 +115,7 @@ String oks=request.getParameter("t");
 				<div class="w3-panel w3-card">
 					<br>
 						<img src="updateimage.png">
-					<h3>Update Institution Data</h3>
+					<h3>Update College Data</h3>
 					<a href="clgsdatabase.jsp?outer=<%="4" %>" class="btn btn-primary">Update</a>
 				</div>
 				</div>
@@ -145,7 +145,7 @@ String oks=request.getParameter("t");
   
   		<%
   	}
-  	else{
+  	else if(oks.equals("fb")){
 
   		%>
   			<div class="row">
@@ -163,6 +163,90 @@ String oks=request.getParameter("t");
 	</div>
   		
   		<%	
+  	}
+  	else if(oks.equals("univ"))
+  	{
+  		%>
+			
+			<div class="row">
+			<div class="col-3">
+				<div class="w3-panel w3-card">
+					<br>
+					<img src="insertimage.png">
+					<h3>Insert University Data</h3>
+					<a href="clgsdatabase.jsp?outer=<%="7" %>" class="btn btn-primary">Insert</a>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="w3-panel w3-card">
+					<br>
+					<img src="deleteimage.png">
+					<h3>Delete University Data</h3>
+					<a href="clgsdatabase.jsp?outer=<%="8" %>" class="btn btn-primary">Delete</a>
+				</div>
+			</div>
+			<div class="col-3">
+			 <div class="w3-panel w3-card">
+			 	<br>
+					<img src="viewimage.png">
+			 	<h3>View all Universities Data</h3>
+			 	<a href="clgsdatabase.jsp?outer=<%="9" %>" class="btn btn-primary">View</a>
+			 </div>
+			</div>
+			<div class="col-3">
+			<div class="w3-panel w3-card">
+				<br>
+					<img src="updateimage.png">
+				<h3>Update University Data</h3>
+				<a href="clgsdatabase.jsp?outer=<%="10" %>" class="btn btn-primary">Update</a>
+			</div>
+			</div>
+			
+		
+		</div>
+
+		
+		<%
+  	}
+  	else if(oks.equals("intern"))
+  	{
+  		%>
+		
+		<div class="row">
+		<div class="col-3">
+			<div class="w3-panel w3-card">
+				<br>
+				<img src="insertimage.png">
+				<h3>Insert Internship Data</h3>
+				<a href="clgsdatabase.jsp?outer=<%="11" %>" class="btn btn-primary">Insert</a>
+			</div>
+		</div>
+		<div class="col-3">
+			<div class="w3-panel w3-card">
+				<br>
+				<img src="deleteimage.png">
+				<h3>Delete Internship Data</h3>
+				<a href="clgsdatabase.jsp?outer=<%="12" %>" class="btn btn-primary">Delete</a>
+			</div>
+		</div>
+		<div class="col-3">
+		 <div class="w3-panel w3-card">
+		 	<br>
+				<img src="viewimage.png">
+		 	<h3>View all Internships Data</h3>
+		 	<a href="clgsdatabase.jsp?outer=<%="13" %>" class="btn btn-primary">View</a>
+		 </div>
+		</div>
+		<div class="col-3">
+		<div class="w3-panel w3-card">
+			<br>
+				<img src="updateimage.png">
+			<h3>Update Internships Data</h3>
+			<a href="clgsdatabase.jsp?outer=<%="14" %>" class="btn btn-primary">Update</a>
+		</div>
+		</div>
+	</div>
+	<%
   	}
   
   

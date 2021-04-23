@@ -1,5 +1,7 @@
 <%
 	String one="inst";
+	String four="univ";
+	String five="intern";
 String two="users";
 String thr="fb";
 %>
@@ -77,8 +79,21 @@ String thr="fb";
 
   <div class="w3-panel w3-card">
   <div class="row">
-  		<div class="col"><h2>Institutions Database</h2> (Insert,Update or Delete Institutions Data)</div>
+  		<div class="col"><h2>College Database</h2> (Insert,Update or Delete Institutions Data)</div>
   		<div class="col"><br><a href="insdata.jsp?t=<%=one %>" type="button" style="margin-left:450px" class="btn btn-primary">Continue</a></div>
+  	</div>  
+</div>
+
+<div class="w3-panel w3-card">
+  <div class="row">
+  		<div class="col"><h2>Universities Database</h2> (Insert,Update or Delete Institutions Data)</div>
+  		<div class="col"><br><a href="insdata.jsp?t=<%=four %>" type="button" style="margin-left:450px" class="btn btn-primary">Continue</a></div>
+  	</div>  
+</div>
+<div class="w3-panel w3-card">
+  <div class="row">
+  		<div class="col"><h2>Internships Database</h2> (Insert,Update or Delete Institutions Data)</div>
+  		<div class="col"><br><a href="insdata.jsp?t=<%=five %>" type="button" style="margin-left:450px" class="btn btn-primary">Continue</a></div>
   	</div>  
 </div>
   

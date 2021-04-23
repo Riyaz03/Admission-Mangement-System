@@ -289,7 +289,16 @@ footer{
       <a href="filters.jsp?r=<%=96%>">lessthan or equals 100 </a>
     </div> 
   </div> 
-  
+  <div class="dropdown">
+    <button class="dropbtn" style="font-size: large;margin-top: 7px;">Filters
+      <i class="fa fa-caret-down"></i>
+    </button>
+    
+     <div class="dropdown-content">
+      <a href="newfilter.jsp?r=<%=-1%>&b=<%="eamcet"%>">Eamcet</a>
+      <a href="newfilter2.jsp?r=<%=-1%>&b=<%="jee"%>">JeeMains</a>
+    </div> 
+  </div>  
   
   <div class="dropdown" style="margin-left: 470px;">
     <button class="dropbtn" style="font-size: large;margin-top: 7px;">Menu 
@@ -324,6 +333,7 @@ footer{
 				<% 
 				while(rs.next())
 				{
+					String name=rs.getString(1);
 					//out.println(rs.getString(1)+rs.getString(2)+rs.getString(3));
 					%>
 						
@@ -331,7 +341,7 @@ footer{
 				            <div class="w3-panel w3-card">
 				            <br>
 				                <!-- <div class="exam exam1"></div> -->
-				                <img src="homes.jpg" class="w3-round" height="200" width="280">
+				                <img src="unimagedisplay.jsp?name=<%=name%>" class="w3-round" height="200" width="280">
 				                <center>
 				                 <h4 style="text-decoration:underline;font-weight:bold;"><%=rs.getString(1) %></h4>
 				                 Location:<h6 ><%=rs.getString(2) %></h6>
@@ -370,6 +380,7 @@ footer{
     </div> 
   </div> 
     
+</div>
   <div class="dropdown" style="margin-left: 700px;">
     <button class="dropbtn" style="font-size: large;margin-top: 7px;">Menu 
       <i class="fa fa-caret-down"></i>
@@ -381,8 +392,8 @@ footer{
       <a href="newabout.html">About Us</a>
       <a href="logout.jsp">Logout</a>
     </div>
-  </div> 
-</div>
+  </div>
+  
 	  <%
 	  String ems=(String)session.getAttribute("email");
 		if(ems!=null)
@@ -401,6 +412,7 @@ footer{
 				<% 
 				while(rs.next())
 				{
+					String name=rs.getString(1);
 					//out.println(rs.getString(1)+rs.getString(2)+rs.getString(3));
 					%>
 						
@@ -408,7 +420,7 @@ footer{
 				            <div class="w3-panel w3-card">
 				            <br>
 				                <!-- <div class="exam exam1"></div> -->
-				                <img src="homes.jpg" class="w3-round" height="200" width="280">
+				                <img src="imagedisplay.jsp?name=<%=name%>" class="w3-round" height="200" width="280">
 				                <center>
 				                 <h4 style="text-decoration:underline;font-weight:bold;"><%=rs.getString(1) %></h4>
 				                 Location:<h6 ><%=rs.getString(2) %></h6>
@@ -477,6 +489,7 @@ footer{
 				
 				while(rs.next())
 				{
+					String name=rs.getString(1);
 					%>
 					<div class="w3-row">
 					<% 
@@ -488,7 +501,7 @@ footer{
 				            <br>
 				                <!-- <div class="exam exam1"></div> -->
 				                <div class="w3-row">
-				                	<div class="w3-col s4"><img src="homes.jpg" class="w3-round" height="150" width="280"></div>
+				                	<div class="w3-col s4"><img src="inimagedisplay.jsp?name=<%=name%>" class="w3-round" height="150" width="280"></div>
 				                	<div class="w3-col s4"><label style="font-weight:bold;">Company Name:</label><h4><%=rs.getString(1) %></h4>				                
 				                 <label style="font-weight:bold;">Location:</label><h6 ><%=rs.getString(2) %></h6>
 				                 </div>

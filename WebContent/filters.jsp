@@ -312,6 +312,7 @@ if(rank==-5)
 		
 		while(rs.next())
 		{
+			String name=rs.getString(1);
 			%>
 			<div class="w3-row">
 			<% 
@@ -323,7 +324,7 @@ if(rank==-5)
 		            <br>
 		                <!-- <div class="exam exam1"></div> -->
 		                <div class="w3-row">
-		                	<div class="w3-col s4"><img src="homes.jpg" class="w3-round" height="150" width="280"></div>
+		                	<div class="w3-col s4"><img src="inimagedisplay.jsp?name=<%=name%>" class="w3-round" height="150" width="280"></div>
 		                	<div class="w3-col s4"><label style="font-weight:bold;">Company Name:</label><h4><%=rs.getString(1) %></h4>				                
 		                 <label style="font-weight:bold;">Location:</label><h6 ><%=rs.getString(2) %></h6>
 		                 </div>
