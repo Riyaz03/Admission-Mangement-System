@@ -181,12 +181,29 @@ li a.active {
     height: 180px;
     width: 385px;
 }
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  }
+
 footer{
    background: #111;
    height: auto;
@@ -319,6 +336,50 @@ if(ems!=null)
 						          </div>
 						          
 						</div>
+						<table id="customers">
+							<tr>
+								<th>Minimum Eamcet Rank Required</th>
+								<td><%=rs.getString(3) %></td>
+							</tr>
+							<tr>
+								<th>Minimum Mains Percentage Required </th>
+								<td><%=rs.getString(4) %></td>
+							</tr>
+							<tr>
+								<th>Available Programs</th>
+								<td> <%=rs.getString(7) %></td>
+							</tr>
+							<tr>
+								<th>NAAC Grade</th>
+								<td><%=rs.getString(8) %></td>
+							</tr>
+							<tr>
+								<th>Placement Companies</th>
+								<td><%=rs.getString(9) %></td>
+							</tr>
+							<tr>
+								<th>Number Of Students</th>
+								<td><%=rs.getString(10) %></td>
+							</tr>
+							<tr>
+								<th>Number Of Teaching Faculty</th>
+								<td><%=rs.getString(11) %></td>
+							</tr>
+							<tr>
+								<th>Number Of Non Teaching Faculty</th>
+								<td><%=rs.getString(12) %></td>
+							</tr>
+							<tr>
+								<th>Hostal Facility In Campus</th>
+								<td><%=rs.getString(13) %></td>
+							</tr>
+							<tr>
+								<th>Contact</th>
+								<td><%=rs.getString(14) %></td>
+							</tr>
+						</table>
+						<br>
+						<br>
 						<%
 					}
 					else{
@@ -354,6 +415,48 @@ if(ems!=null)
 						          </div>
 						          
 						</div>
+						
+						
+						<table id="customers">
+							<tr>
+								<th>Branch</th>
+								<td><%=rs.getString(3) %></td>
+							</tr>
+							<tr>
+								<th>Fee Starts From </th>
+								<td>INR <%=rs.getString(6) %></td>
+							</tr>
+							<tr>
+								<th>Numeber of Students placed in IIT's(last year)</th>
+								<td> <%=rs.getString(7) %></td>
+							</tr>
+							<tr>
+								<th>Numeber of Students placed in NIT's(last year)</th>
+								<td><%=rs.getString(8) %></td>
+							</tr>
+							<tr>
+								<th>Numeber of Students placed in NNIT's(last year)</th>
+								<td><%=rs.getString(9) %></td>
+							</tr>
+							<tr>
+								<th>Top Eamcet Rank(last year)</th>
+								<td><%=rs.getString(10) %></td>
+							</tr>
+							<tr>
+								<th>Top Jee Mains Percentage(last year)</th>
+								<td><%=rs.getString(11) %></td>
+							</tr>
+							<tr>
+								<th>College Timings</th>
+								<td><%=rs.getString(12) %></td>
+							</tr>
+							<tr>
+								<th>Contact</th>
+								<td><%=rs.getString(13) %></td>
+							</tr>
+						</table>
+						<br>
+						<br>
 						<%
 					}
 					else{

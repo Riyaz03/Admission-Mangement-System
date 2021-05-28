@@ -13,7 +13,7 @@ FileInputStream fis=new FileInputStream(imagefile);
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","epproject","epproject");
 		
-		PreparedStatement pstmt=con.prepareStatement("insert into colleges values(?,?,?,?,?)");
+		PreparedStatement pstmt=con.prepareStatement("insert into colleges(name,location,branch,director,image) values(?,?,?,?,?)");
 		pstmt.setString(1,request.getParameter("clgname"));
 		pstmt.setString(2,request.getParameter("clgloc"));
 		pstmt.setString(3,request.getParameter("clgbr"));
